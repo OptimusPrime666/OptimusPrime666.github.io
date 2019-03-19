@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-19T12:10:16.967Z</updated>
+  <updated>2019-03-19T12:37:49.630Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>slice</title>
+    <link href="http://yoursite.com/2019/03/19/slice/"/>
+    <id>http://yoursite.com/2019/03/19/slice/</id>
+    <published>2019-03-19T11:55:23.000Z</published>
+    <updated>2019-03-19T12:37:49.630Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数组方法slice的封装"><a href="#数组方法slice的封装" class="headerlink" title="数组方法slice的封装"></a>数组方法slice的封装</h2><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.mySlice = <span class="keyword">function</span>(start,end)&#123;</span><br><span class="line"><span class="keyword">if</span>(typeof start!== Number&amp;&amp;typeof end!== Number)&#123;</span><br><span class="line"><span class="built_in">return</span> this;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> newarr = [];</span><br><span class="line"><span class="keyword">if</span>(arguments[0]&amp;&amp;!arguments[1]&amp;&amp;arguments[1]!==0)&#123;</span><br><span class="line"><span class="keyword">if</span>(arguments[0]&gt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; this.length; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[0]&lt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = this.length+start; i &lt; this.length; i++) &#123;</span><br><span class="line">newarr.myPush(this[i]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[1])&#123;</span><br><span class="line"><span class="keyword">if</span>(start&lt;0)&#123;</span><br><span class="line"><span class="built_in">return</span> []</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(end&lt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; this.length+end; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; end; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> newarr;</span><br><span class="line">&#125;</span><br><span class="line">var arr1=[1,2,3,4];</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数组方法slice的封装&quot;&gt;&lt;a href=&quot;#数组方法slice的封装&quot; class=&quot;headerlink&quot; title=&quot;数组方法slice的封装&quot;&gt;&lt;/a&gt;数组方法slice的封装&lt;/h2&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
