@@ -14,7 +14,7 @@
     
     
     
-    <title>slice | Me Blog</title>
+    <title>slice | Me Blog | Valar Morghulis Valar Dohaeris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Me Blog">
 <meta property="og:description" content="数组方法slice的封装">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-19T12:37:49.630Z">
+<meta property="og:updated_time" content="2019-03-20T08:28:26.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="slice">
 <meta name="twitter:description" content="数组方法slice的封装">
@@ -81,13 +81,6 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags">
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
               <a href="/categories">
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
@@ -95,14 +88,14 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/yscoder" target="_blank">
+              <a href="https://github.com/OptimusPrime666/OptimusPrime666.github.io" target="_blank">
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://www.weibo.com/ysweb" target="_blank">
+              <a href="https://weibo.com/5683756091/profile?topnav=1&wvr=6" target="_blank">
                 <i class="icon icon-lg icon-weibo"></i>
                 Weibo
               </a>
@@ -112,13 +105,6 @@
               <a href="/custom">
                 <i class="icon icon-lg icon-link"></i>
                 测试
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect active">
-              <a href="/">
-                <i class="icon icon-lg icon-categories"></i>
-                Categories
               </a>
             </li>
         
@@ -202,7 +188,8 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="数组方法slice的封装"><a href="#数组方法slice的封装" class="headerlink" title="数组方法slice的封装"></a>数组方法slice的封装</h2><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.mySlice = <span class="keyword">function</span>(start,end)&#123;</span><br><span class="line">		<span class="keyword">if</span>(typeof start!== Number&amp;&amp;typeof end!== Number)&#123;</span><br><span class="line">			<span class="built_in">return</span> this;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">let</span> newarr = [];</span><br><span class="line">		<span class="keyword">if</span>(arguments[0]&amp;&amp;!arguments[1]&amp;&amp;arguments[1]!==0)&#123;</span><br><span class="line">			<span class="keyword">if</span>(arguments[0]&gt;0)&#123;</span><br><span class="line">				<span class="keyword">for</span> (var i = start; i &lt; this.length; i++) &#123;</span><br><span class="line">					newarr.myPush(this[i])</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[0]&lt;0)&#123;</span><br><span class="line">				<span class="keyword">for</span> (var i = this.length+start; i &lt; this.length; i++) &#123;</span><br><span class="line">					newarr.myPush(this[i]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[1])&#123;</span><br><span class="line">			<span class="keyword">if</span>(start&lt;0)&#123;</span><br><span class="line">				<span class="built_in">return</span> []</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(end&lt;0)&#123;</span><br><span class="line">				<span class="keyword">for</span> (var i = start; i &lt; this.length+end; i++) &#123;</span><br><span class="line">					newarr.myPush(this[i])</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">for</span> (var i = start; i &lt; end; i++) &#123;</span><br><span class="line">					newarr.myPush(this[i])</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">return</span> newarr;</span><br><span class="line">	&#125;</span><br><span class="line">	var arr1=[1,2,3,4];</span><br></pre></td></tr></table></figure>
+<p>这种封装的还有会有不能正常判断的几种条件，欢迎修改<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.mySlice = <span class="keyword">function</span>(start,end)&#123;</span><br><span class="line">		<span class="keyword">if</span>(typeof start!== Number&amp;&amp;typeof end!== Number)&#123;</span><br><span class="line">			<span class="built_in">return</span> this;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">let</span> newarr = [];</span><br><span class="line">		<span class="keyword">if</span>(arguments[0]&amp;&amp;!arguments[1]&amp;&amp;arguments[1]!==0)&#123;</span><br><span class="line">			<span class="keyword">if</span>(arguments[0]&gt;0)&#123;</span><br><span class="line">				<span class="keyword">for</span> (var i = start; i &lt; this.length; i++) &#123;</span><br><span class="line">					newarr.myPush(this[i])</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[0]&lt;0)&#123;</span><br><span class="line">				<span class="keyword">for</span> (var i = this.length+start; i &lt; this.length; i++) &#123;</span><br><span class="line">					newarr.myPush(this[i]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[1])&#123;</span><br><span class="line">			<span class="keyword">if</span>(start&lt;0)&#123;</span><br><span class="line">				<span class="built_in">return</span> []</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(end&lt;0)&#123;</span><br><span class="line">				<span class="keyword">for</span> (var i = start; i &lt; this.length+end; i++) &#123;</span><br><span class="line">					newarr.myPush(this[i])</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">for</span> (var i = start; i &lt; end; i++) &#123;</span><br><span class="line">					newarr.myPush(this[i])</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">return</span> newarr;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -210,12 +197,12 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-19T12:37:49.630Z" itemprop="dateUpdated">2019-03-19 20:37:49</time>
+    Last updated: <time datetime="2019-03-20T08:28:26.969Z" itemprop="dateUpdated">2019-03-20 16:28:26</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/03/19/slice/" target="_blank" rel="external">http://yoursite.com/2019/03/19/slice/</a>
+        写的不好，欢迎指正。
         
     </div>
     
@@ -289,7 +276,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/03/20/语义化/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">语义化</h4>
+      </a>
+    </div>
   
 
   
@@ -337,17 +331,8 @@
     <div class="reward-content">
         
         <div class="reward-code">
-            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+            <img id="rewardCode" src="/img/AAAB18AE52CCDCB2AA0545F28807CE9B.jpg" alt="打赏二维码">
         </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
         
     </div>
 </div>

@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Me Blog</title>
   
-  
+  <subtitle>Valar Morghulis Valar Dohaeris</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-19T12:37:49.630Z</updated>
+  <updated>2019-03-20T10:39:54.361Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>语义化</title>
+    <link href="http://yoursite.com/2019/03/20/%E8%AF%AD%E4%B9%89%E5%8C%96/"/>
+    <id>http://yoursite.com/2019/03/20/语义化/</id>
+    <published>2019-03-20T09:04:37.000Z</published>
+    <updated>2019-03-20T10:39:54.361Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="理解HTML语义化"><a href="#理解HTML语义化" class="headerlink" title="理解HTML语义化"></a>理解HTML语义化</h2><p>1、什么是HTML语义化？</p><p>&lt;基本上都是围绕着几个主要的标签，像标题（H1~H6）、列表（li）、强调（strong em）等等&gt;</p><p>　　根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。</p><p>2、为什么要语义化？</p><p>为了在没有CSS的情况下，页面也能呈现出很好地内容结构、代码结构:为了裸奔时好看；<br>用户体验：例如title、alt用于解释名词或解释图片信息、label标签的活用；<br>有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；<br>方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；<br>便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。<br>3、写HTML代码时应注意什么？</p><p>尽可能少的使用无语义的标签div和span；<br>在语义不明显时，既可以使用div或者p时，尽量用p, 因为p在默认情况下有上下间距，对兼容特殊终端有利；<br>不要使用纯样式标签，如：b、font、u等，改用css设置。<br>需要强调的文本，可以包含在strong或者em标签中（浏览器预设样式，能用CSS指定就不用他们），strong默认样式是加粗（不要用b），em是斜体（不用i）；<br>使用表格时，标题要用caption，表头用thead，主体部分用tbody包围，尾部用tfoot包围。表头和一般单元格要区分开，表头用th，单元格用td；<br>表单域要用fieldset标签包起来，并用legend标签说明表单的用途；<br>每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for=someld来让说明文本和相对应的input关联起来。<br> 4、HTML5新增了header、footer、hgroup、nav、aside、section、article等标签</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;理解HTML语义化&quot;&gt;&lt;a href=&quot;#理解HTML语义化&quot; class=&quot;headerlink&quot; title=&quot;理解HTML语义化&quot;&gt;&lt;/a&gt;理解HTML语义化&lt;/h2&gt;&lt;p&gt;1、什么是HTML语义化？&lt;/p&gt;
+&lt;p&gt;&amp;lt;基本上都是围绕着几个主要的标签，像
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>slice</title>
     <link href="http://yoursite.com/2019/03/19/slice/"/>
     <id>http://yoursite.com/2019/03/19/slice/</id>
     <published>2019-03-19T11:55:23.000Z</published>
-    <updated>2019-03-19T12:37:49.630Z</updated>
+    <updated>2019-03-20T08:28:26.969Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="数组方法slice的封装"><a href="#数组方法slice的封装" class="headerlink" title="数组方法slice的封装"></a>数组方法slice的封装</h2><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.mySlice = <span class="keyword">function</span>(start,end)&#123;</span><br><span class="line"><span class="keyword">if</span>(typeof start!== Number&amp;&amp;typeof end!== Number)&#123;</span><br><span class="line"><span class="built_in">return</span> this;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> newarr = [];</span><br><span class="line"><span class="keyword">if</span>(arguments[0]&amp;&amp;!arguments[1]&amp;&amp;arguments[1]!==0)&#123;</span><br><span class="line"><span class="keyword">if</span>(arguments[0]&gt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; this.length; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[0]&lt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = this.length+start; i &lt; this.length; i++) &#123;</span><br><span class="line">newarr.myPush(this[i]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[1])&#123;</span><br><span class="line"><span class="keyword">if</span>(start&lt;0)&#123;</span><br><span class="line"><span class="built_in">return</span> []</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(end&lt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; this.length+end; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; end; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> newarr;</span><br><span class="line">&#125;</span><br><span class="line">var arr1=[1,2,3,4];</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="数组方法slice的封装"><a href="#数组方法slice的封装" class="headerlink" title="数组方法slice的封装"></a>数组方法slice的封装</h2><a id="more"></a><p>这种封装的还有会有不能正常判断的几种条件，欢迎修改<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.mySlice = <span class="keyword">function</span>(start,end)&#123;</span><br><span class="line"><span class="keyword">if</span>(typeof start!== Number&amp;&amp;typeof end!== Number)&#123;</span><br><span class="line"><span class="built_in">return</span> this;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> newarr = [];</span><br><span class="line"><span class="keyword">if</span>(arguments[0]&amp;&amp;!arguments[1]&amp;&amp;arguments[1]!==0)&#123;</span><br><span class="line"><span class="keyword">if</span>(arguments[0]&gt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; this.length; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[0]&lt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = this.length+start; i &lt; this.length; i++) &#123;</span><br><span class="line">newarr.myPush(this[i]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arguments[1])&#123;</span><br><span class="line"><span class="keyword">if</span>(start&lt;0)&#123;</span><br><span class="line"><span class="built_in">return</span> []</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(end&lt;0)&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; this.length+end; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> (var i = start; i &lt; end; i++) &#123;</span><br><span class="line">newarr.myPush(this[i])</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> newarr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
@@ -49,6 +71,47 @@
       
         &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
       
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ReactPrinciple</title>
+    <link href="http://yoursite.com/2018/03/20/ReactPrinciple/"/>
+    <id>http://yoursite.com/2018/03/20/ReactPrinciple/</id>
+    <published>2018-03-20T03:00:34.000Z</published>
+    <updated>2019-03-20T08:32:28.804Z</updated>
+    
+    <content type="html"><![CDATA[<p>##React的底层原理</p><p>React 核心技术 —— 虚拟DOM（Virtual DOM）</p><p>在前端开发的过程中，我们经常会做的一件事就是将变化的数据实时更新到UI上，这时就需要对DOM进行更新和重新渲染，而频繁的DOM操作通常是性能瓶颈产生的原因之一，有时候我们会遇到这样一种尴尬的情况：比如有一个列表数据，当用户执行刷新操作时，Ajax会重新从后台请求数据，即使新请求的数据和上次完全相同，DOM也会被全部更新一遍并进行重新渲染，这样就产生了不必要的性能开销。</p><p>React为此引入了虚拟DOM（Virtual DOM）机制：对于每一个组件，React会在内存中构建一个相对应的DOM树，基于React开发时所有的DOM构造都是通过虚拟DOM进行，每当组件的状态发生变化时，React都会重新构建整个DOM数据，然后将当前的整个DOM树和上一次的DOM树进行对比，得出DOM结构变化的部分(Patchs)，然后将这些Patchs 再更新到真实DOM中。整个过程都是在内存中进行，因此是非常高效的。借用一张图可以清晰的表示虚拟DOM的工作机制：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="http://seo-1255598498.file.myqcloud.com/full/303368f0933da6f35f33151db7dfa28e07ee34cb.jpg" alt="这是图片" title>                </div>                <div class="image-caption">这是图片</div>            </figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##React的底层原理&lt;/p&gt;
+&lt;p&gt;React 核心技术 —— 虚拟DOM（Virtual DOM）&lt;/p&gt;
+&lt;p&gt;在前端开发的过程中，我们经常会做的一件事就是将变化的数据实时更新到UI上，这时就需要对DOM进行更新和重新渲染，而频繁的DOM操作通常是性能瓶颈产生的原因
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VuePrinciple</title>
+    <link href="http://yoursite.com/2018/03/20/VuePrinciple/"/>
+    <id>http://yoursite.com/2018/03/20/VuePrinciple/</id>
+    <published>2018-03-20T02:37:52.000Z</published>
+    <updated>2019-03-20T08:32:20.519Z</updated>
+    
+    <content type="html"><![CDATA[<p>##Vue的底层原理<br><a id="more"></a><br>VUE实现数据双向绑定的效果，需要三大模块<br>1、Observer：能够对数据对象的所有属性进行监听，如有变动可拿到最新值并通知订阅者</p><p>2、Compile：对每个元素节点的指令进行扫描和解析，根据指令模板替换数据，以及绑定相应的更新函数</p><p>3、Watcher：作为链接Observer和Compile的桥梁，能够订阅并受到每个属性变动的通知，并执行指令绑定的相应回掉函数，从而更新视图</p><p>未完待续…</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##Vue的底层原理&lt;br&gt;
     
     </summary>
     
