@@ -80,6 +80,59 @@
   </entry>
   
   <entry>
+    <title>如何规避javaScript多人开发重名问题</title>
+    <link href="http://yoursite.com/2019/01/20/%E5%A6%82%E4%BD%95%E8%A7%84%E9%81%BFjavaScript%E5%A4%9A%E4%BA%BA%E5%BC%80%E5%8F%91%E9%87%8D%E5%90%8D%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2019/01/20/如何规避javaScript多人开发重名问题/</id>
+    <published>2019-01-20T03:52:44.000Z</published>
+    <updated>2019-03-30T09:53:31.689Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>1.采用命名空间2.采用封闭空间3.js模块化mvc(数据层，视图层，控制层)4.seajs5.变量转换为对象的属性6.对象化</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;1.采用命名空间
+2.采用封闭空间
+3.js模块化mvc(数据层，视图层，控制层)
+4.seajs
+5.变量转换为对象的属性
+6.对象化
+&lt;/code&gt;&lt;/pre&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网页从输入网址到渲染完成的7步</title>
+    <link href="http://yoursite.com/2019/01/04/%E7%BD%91%E9%A1%B5%E4%BB%8E%E8%BE%93%E5%85%A5%E7%BD%91%E5%9D%80%E5%88%B0%E6%B8%B2%E6%9F%93%E5%AE%8C%E6%88%90%E7%9A%847%E6%AD%A5/"/>
+    <id>http://yoursite.com/2019/01/04/网页从输入网址到渲染完成的7步/</id>
+    <published>2019-01-04T09:37:09.000Z</published>
+    <updated>2019-03-30T09:42:54.617Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>1.输入网址2.发送DNS服务器，并获取域名对应的web服务器对应的ip3.与web服务器建立TCP连接4.浏览器向web服务器发送http请求5.web服务器响应请求，并返回指定的url数据(或者错误信息)6.浏览器下载web服务器返回的数据及解析html源文件7.生成DOM树，解析css和js渲染页面，直至显示完成</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;1.输入网址
+2.发送DNS服务器，并获取域名对应的web服务器对应的ip
+3.与web服务器建立TCP连接
+4.浏览器向web服务器发送http请求
+5.web服务器响应请求，并返回指定的url数据(或者错误信息)
+6.浏览器下载web服务器返回的数据及解
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>两种盒子模型</title>
     <link href="http://yoursite.com/2018/07/05/%E4%B8%A4%E7%A7%8D%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"/>
     <id>http://yoursite.com/2018/07/05/两种盒子模型/</id>
@@ -155,7 +208,7 @@
     <link href="http://yoursite.com/2018/03/20/VuePrinciple/"/>
     <id>http://yoursite.com/2018/03/20/VuePrinciple/</id>
     <published>2018-03-20T02:37:52.000Z</published>
-    <updated>2019-03-20T08:32:20.519Z</updated>
+    <updated>2019-03-30T09:40:46.936Z</updated>
     
     <content type="html"><![CDATA[<p>##Vue的底层原理<br><a id="more"></a><br>VUE实现数据双向绑定的效果，需要三大模块<br>1、Observer：能够对数据对象的所有属性进行监听，如有变动可拿到最新值并通知订阅者</p><p>2、Compile：对每个元素节点的指令进行扫描和解析，根据指令模板替换数据，以及绑定相应的更新函数</p><p>3、Watcher：作为链接Observer和Compile的桥梁，能够订阅并受到每个属性变动的通知，并执行指令绑定的相应回掉函数，从而更新视图</p><p>未完待续…</p>]]></content>
     
