@@ -14,24 +14,24 @@
     
     
     
-    <title>VuePrinciple | Me Blog | Valar Morghulis Valar Dohaeris</title>
+    <title>MVVM和MVC的区别 | Me Blog | Valar Morghulis Valar Dohaeris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content>
-    <meta name="description" content="##Vue的底层原理">
+    <meta name="description" content="##MVC设计模式(model和view之间不能通信)    mvc是一种设计模式，M表示Model，V表示View，C表示Controller 1.Model负责存储、定义和操作数据 2.View用来展示给用户，并且和用户进行交互 3.Controller是Model和View的协调者，Controller把model拿到View，Controller可以和View和model进行通信，View">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VuePrinciple">
-<meta property="og:url" content="http://yoursite.com/2018/03/20/VuePrinciple/index.html">
+<meta property="og:title" content="MVVM和MVC的区别">
+<meta property="og:url" content="http://yoursite.com/2018/03/30/MVVM和MVC的区别/index.html">
 <meta property="og:site_name" content="Me Blog">
-<meta property="og:description" content="##Vue的底层原理">
+<meta property="og:description" content="##MVC设计模式(model和view之间不能通信)    mvc是一种设计模式，M表示Model，V表示View，C表示Controller 1.Model负责存储、定义和操作数据 2.View用来展示给用户，并且和用户进行交互 3.Controller是Model和View的协调者，Controller把model拿到View，Controller可以和View和model进行通信，View">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-30T09:40:46.936Z">
+<meta property="og:updated_time" content="2019-03-31T13:04:15.148Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VuePrinciple">
-<meta name="twitter:description" content="##Vue的底层原理">
+<meta name="twitter:title" content="MVVM和MVC的区别">
+<meta name="twitter:description" content="##MVC设计模式(model和view之间不能通信)    mvc是一种设计模式，M表示Model，V表示View，C表示Controller 1.Model负责存储、定义和操作数据 2.View用来展示给用户，并且和用户进行交互 3.Controller是Model和View的协调者，Controller把model拿到View，Controller可以和View和model进行通信，View">
     
         <link rel="alternate" type="application/atom+xml" title="Me Blog" href="/atom.xml">
     
@@ -119,7 +119,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">VuePrinciple</div>
+        <div class="flex-col header-title ellipsis">MVVM和MVC的区别</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -141,11 +141,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">VuePrinciple</h1>
+        <h1 class="title">MVVM和MVC的区别</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-03-20T02:37:52.000Z" itemprop="datePublished" class="page-time">
-  2018-03-20
+                <time datetime="2018-03-30T12:19:36.000Z" itemprop="datePublished" class="page-time">
+  2018-03-30
 </time>
 
 
@@ -162,12 +162,12 @@
 <div class="container body-wrap">
     
 
-<article id="post-VuePrinciple" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-MVVM和MVC的区别" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">VuePrinciple</h1>
+        <h1 class="post-card-title">MVVM和MVC的区别</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-03-20 10:37:52" datetime="2018-03-20T02:37:52.000Z" itemprop="datePublished">2018-03-20</time>
+            <time class="post-time" title="2018-03-30 20:19:36" datetime="2018-03-30T12:19:36.000Z" itemprop="datePublished">2018-03-30</time>
 
             
 
@@ -180,10 +180,12 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>##Vue的底层原理<br><a id="more"></a><br>VUE实现数据双向绑定的效果，需要三大模块<br>1、Observer：能够对数据对象的所有属性进行监听，如有变动可拿到最新值并通知订阅者</p>
-<p>2、Compile：对每个元素节点的指令进行扫描和解析，根据指令模板替换数据，以及绑定相应的更新函数</p>
-<p>3、Watcher：作为链接Observer和Compile的桥梁，能够订阅并受到每个属性变动的通知，并执行指令绑定的相应回掉函数，从而更新视图</p>
-<p>未完待续…</p>
+            <p>##MVC设计模式(model和view之间不能通信)<br>    mvc是一种设计模式，M表示Model，V表示View，C表示Controller</p>
+<pre><code>1.Model负责存储、定义和操作数据
+2.View用来展示给用户，并且和用户进行交互
+3.Controller是Model和View的协调者，Controller把model拿到View，Controller可以和View和model进行通信，View不能和Controller通信，当数据更新时Model和Controller通信，Controller在通知View进行变化
+4.View仅仅是用来展示的，Model仅仅是用来存放数据的
+</code></pre><p>##MVVM是一种设计思想<br>    MVVM中M代表的是Model，V代表的是View，VM代表的是ViewModel，在这种思想中Model和ViewModel的交互是双向的，Model改变的时候ViewModel也会改变，进而ViewModel的变化也会立刻映射到View上。</p>
 
         </div>
 
@@ -192,7 +194,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-30T09:40:46.936Z" itemprop="dateUpdated">2019-03-30 17:40:46</time>
+    Last updated: <time datetime="2019-03-31T13:04:15.148Z" itemprop="dateUpdated">2019-03-31 21:04:15</time>
 </span><br>
 
 
@@ -226,7 +228,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/03/20/VuePrinciple/&title=《VuePrinciple》 — Me Blog&pic=http://yoursite.com/img/153329qtnx9tnom8mpptyo.jpg.thumb.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/03/30/MVVM和MVC的区别/&title=《MVVM和MVC的区别》 — Me Blog&pic=http://yoursite.com/img/153329qtnx9tnom8mpptyo.jpg.thumb.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -236,22 +238,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/03/20/VuePrinciple/&title=《VuePrinciple》 — Me Blog&source=##Vue的底层原理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/03/30/MVVM和MVC的区别/&title=《MVVM和MVC的区别》 — Me Blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/20/VuePrinciple/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/30/MVVM和MVC的区别/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《VuePrinciple》 — Me Blog&url=http://yoursite.com/2018/03/20/VuePrinciple/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MVVM和MVC的区别》 — Me Blog&url=http://yoursite.com/2018/03/30/MVVM和MVC的区别/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/20/VuePrinciple/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/30/MVVM和MVC的区别/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -274,18 +276,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/03/21/Vue中双向绑定的的原理/" id="post-prev" class="post-nav-link">
+      <a href="/2018/04/05/清除浮动/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Vue中双向绑定的的原理</h4>
+        <h4 class="title">清除浮动</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/03/15/Vue生命周期/" id="post-next" class="post-nav-link">
+      <a href="/2018/03/21/Vue中双向绑定的的原理/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Vue生命周期</h4>
+        <h4 class="title">Vue中双向绑定的的原理</h4>
       </a>
     </div>
   
@@ -375,7 +377,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/03/20/VuePrinciple/&title=《VuePrinciple》 — Me Blog&pic=http://yoursite.com/img/153329qtnx9tnom8mpptyo.jpg.thumb.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/03/30/MVVM和MVC的区别/&title=《MVVM和MVC的区别》 — Me Blog&pic=http://yoursite.com/img/153329qtnx9tnom8mpptyo.jpg.thumb.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -385,22 +387,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/03/20/VuePrinciple/&title=《VuePrinciple》 — Me Blog&source=##Vue的底层原理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/03/30/MVVM和MVC的区别/&title=《MVVM和MVC的区别》 — Me Blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/20/VuePrinciple/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/30/MVVM和MVC的区别/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《VuePrinciple》 — Me Blog&url=http://yoursite.com/2018/03/20/VuePrinciple/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MVVM和MVC的区别》 — Me Blog&url=http://yoursite.com/2018/03/30/MVVM和MVC的区别/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/20/VuePrinciple/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/30/MVVM和MVC的区别/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -411,7 +413,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOklEQVR42u3azXLCMAxFYd7/pdOZrugUh3Pl0GmkkxUDCfjzQlg/jwe+ju/r+fXztbr/91OrT8/fv+ySIUPGbRnH6UUWcY5c3VnbsiVVhgwZAxi1IEvCKAnTKVuGDBkyVks8f6oGSH9XhgwZMtIj2vlh8ap3ZMiQIYMnsft3psfBj+TiMmTIuCGj1hj4m9cf72/IkCHj3zOO8DpPX3cOgmlw//GUDBkyWjNqhbP9OQeSKqdprQwZMroyeDAlh7ZayE5D+Ys7ZciQMYZBxibIOAVZECnDkXRahgwZExg8vUx/jAT0dPvejG7IkCFjAGN/wKsWUtNtWoZ1GTJkNGXwclgaBNONSAc4ZMiQMY1RO/bxYlzcjAwzUxkyZPRmkDI9TzXT1HTnKRkyZExjpOMXKPyBT9M2AA/TMmTI6MTgwxB85CJtFfCj55t/DBkyZDRl8IXyhuVOO5O/XvY3ZMiQMYBRS0FJcEyL/rxsJ0OGjAmMq8Ys+KakDYPggChDhoymjPRIl+J50OQFu2USK0OGjHaMNMDxdHS/ScBTWRkyZExgFAvx260Fvug3d8qQIaM1I/2Zq4Yn0kYm+n4ZMmQ0ZdQKXukhslaSI98vQ4aMCYwLojUG8AXV8DJkyOjN4EF2v53Jtwz1NGqTHTJkyLgtgwQ+XqxP25O1oI+GLWTIkDGMkRb90zGO2oiYDBkyZOwkqLXDZe3wKkOGjAmMWrE+TjXxAEeMlyFDRmtGmkDypfON2GlzypAhozXjCzxux2WUA6DHAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aS27DMAwFwN7/0inQVYHUyiOpFIg8WgWG42i8YMTP11e8Hj/r+crv9Xz96v71c57v2bYwMDA+lvFYrmdG8mNX313fs34pL6gYGBg3YFS3ssbkW0leWfIHgIGBgZEf7NZb6QViDAwMjOrjckw16V2/DgwMDIzkcdWwW62MVY+VGBgY92FUGwP/+fmN/Q0MDIwPYTw2reor2LswMDDOZuQtyUmUq7Ytr3b1YocYGBiHMqpjE/PEtXcALbxRDAyMQxn55vIGQF5cqzZNMTAw7slImgGTwlwvHK+fc5m+YmBgHMroPbqamo4GKdbhHgMD42hGktYmobBaSqu2MJNiHAYGxtmM3nhWEgon5bxqroqBgXEqY+/wVvVQuCvFxcDAOJvRW0loTgJub8hsUgrEwMD4XEYeHCcHwUmwbv57YGBgHMSYhNRqqa4Hbh4NMTAwjmP0RsHeEUZ77VUMDIyzGUky2TsCJg2G9SoEawwMjBsweglt/jryANpsKmBgYNyAMQfsHcvYVlzDwMA4iDEPuHkimj+58OsYGBhHM6o/30tWN2wr72xgYGAcxOgVv5JjX94q6LUTMDAw7sOYhLmEUQ3iyVF1EqwxMDA+l5EH2fkIxa4RjT+uYGBg3IBRLcNNtt7LrV/AMDAwMIrbzUPqJN0d1QgxMDAOZeRDrsm3qnk2BgYGRt4M6AXK3iBFeWYEAwPjUMau8Yu86N9rjuZNCAwMjIMY30eadHJ7JwreAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
