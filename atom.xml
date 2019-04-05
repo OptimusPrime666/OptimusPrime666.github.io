@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Me Blog</title>
+  <title>No one</title>
   
   <subtitle>Valar Morghulis Valar Dohaeris</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-27T12:31:08.898Z</updated>
+  <updated>2019-04-05T07:50:08.096Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前后端的连接步骤</title>
+    <link href="http://yoursite.com/2019/04/05/%E5%89%8D%E5%90%8E%E7%AB%AF%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%AD%A5%E9%AA%A4/"/>
+    <id>http://yoursite.com/2019/04/05/前后端的连接步骤/</id>
+    <published>2019-04-05T07:28:11.000Z</published>
+    <updated>2019-04-05T07:50:08.096Z</updated>
+    
+    <content type="html"><![CDATA[<p>前后端的连接步骤又叫做’三次握手四次挥手’，下面咱们先来说说是怎么’握手’(连接)的<br>    客户端：发送请求(syn包)进入SYN_SEND状态<br>    服务端：收到syn包之后确认客户端的syn，服务器进入SYN_RECV，之后发送一个syn，就是syn+ack<br>    客户端：收到服务端发送过来的SYN包之后，发送一个确认包ACK，发送之后进入ESTABLISHED状态<br>    完成之后开始传输数据</p><pre><code>如果看不懂上面的可以看看下面的客户端：你好服务端：你好，很高兴认识你客户端：你好，我也很高兴认识你之后就开始聊天了</code></pre><p>好了，现在两个人聊的差不多，要回家了，现在应该怎么说呢？来看看’四次挥手’<br>    客户端：发送一个FIN<br>    服务端：收到FIN，发挥ACK，确定序号为收到的序号+1<br>    服务端：服务端关闭连接，发送一个FIN<br>    客户端：收到FIN之后，发送一个ACK，序号为确定序号+1<br>    完成之后双方就关闭了</p><pre><code>如果看不懂还是看下面客户端：天不早了，我要回家了服务端：天确实不早了服务端：你回去吧，我也回了客户端，好勒~</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前后端的连接步骤又叫做’三次握手四次挥手’，下面咱们先来说说是怎么’握手’(连接)的&lt;br&gt;    客户端：发送请求(syn包)进入SYN_SEND状态&lt;br&gt;    服务端：收到syn包之后确认客户端的syn，服务器进入SYN_RECV，之后发送一个syn，就是syn+a
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>git命令和用法</title>
