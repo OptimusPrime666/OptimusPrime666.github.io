@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-05T07:50:08.096Z</updated>
+  <updated>2019-04-21T03:54:16.553Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从pc端到移动端</title>
+    <link href="http://yoursite.com/2019/04/21/%E4%BB%8Epc%E7%AB%AF%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    <id>http://yoursite.com/2019/04/21/从pc端到移动端/</id>
+    <published>2019-04-21T03:27:34.000Z</published>
+    <updated>2019-04-21T03:54:16.553Z</updated>
+    
+    <content type="html"><![CDATA[<p>##如何把已有的PC端网站转换为移动端：<br>    可以在mate标签下面加一行<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"</span> /&gt;</span><br></pre></td></tr></table></figure></p><pre><code>需要调整的UI比较多，但是后台数据不用调整太多。</code></pre><p>##当然也可以用两套网站，但是首先要判断用户是在用什么登陆，这里我们需要了解Navigator对象<br>    这个对象下的userAgent是一个可读的字符串，声明了浏览器用于HTTP请求的用户处理头，这样我们就可以navigator.useragent来看目前访问网站的是什么设备，比如说我在mac那么就是<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36</span><br></pre></td></tr></table></figure></p><p>所以就可以用下面的代码来进行判断目前访问网站的是什么设备<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) &#123;</span><br><span class="line">    window.location.href = <span class="string">"移动端url"</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    window.location.href = <span class="string">"pc端url"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##如何把已有的PC端网站转换为移动端：&lt;br&gt;    可以在mate标签下面加一行&lt;br&gt;    &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue中template解析</title>
+    <link href="http://yoursite.com/2019/04/15/Vue%E4%B8%ADtemplate%E8%A7%A3%E6%9E%90/"/>
+    <id>http://yoursite.com/2019/04/15/Vue中template解析/</id>
+    <published>2019-04-15T12:22:54.000Z</published>
+    <updated>2019-04-15T12:37:14.455Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vue中的Complie会把template模板解析成AST语法树，AST语法树再通过generate得到render函数，render函数的返回值就是VNode，VNode就是我们常说的虚拟Dom，最后在虚拟Dom渲染到真实Dom上。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Vue中的Complie会把template模板解析成AST语法树，AST语法树再通过generate得到render函数，render函数的返回值就是VNode，VNode就是我们常说的虚拟Dom，最后在虚拟Dom渲染到真实Dom上。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端性能优化</title>
+    <link href="http://yoursite.com/2019/04/08/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2019/04/08/前端性能优化/</id>
+    <published>2019-04-08T00:52:28.000Z</published>
+    <updated>2019-04-15T12:13:56.604Z</updated>
+    
+    <content type="html"><![CDATA[<p>##1. 减少HTTP请求</p><pre><code>##1) 合并文件    把所有的脚本放在一个文件中请求，也可以合并所有的CSS，如果每个页面的脚本和样式不一样的话，就会是一项比较麻烦的工作2) CSS Sprites     这是减少图片请求数量的方式(首选)，把所有的背景图片都整合到一张图片中，然后用CSS的background-image和background-position属性来定位要显示的部分3) 图像映射    可以把多张图片合并成单张图片，但是总大小是一样的，减少了HTTP请求数量4) 行内图片    用data: URL模式来把图片嵌入页面，这样会增加HTML文件的大小，把行内图片放在缓存的样式表中可以成功避免HTML文件的大小，但是目前的主流浏览器并不能很好的支持行内图片</code></pre><p>##2. 避免重定向</p><pre><code>##重定向会严重的影响用户体验，在用户和html之间插入重定向会验车页面上所有东西的加载，页面没办法渲染，组件没有办法下载，知道html被送到浏览器如果说页面上跳转到http://abc.com/user会返回一个http://abc.com/user/的301响应，可以使用Apache中可以用Alias，mod_rewrite或者DirectorySlash指令来取消不必要的重定向</code></pre><p>##3. 延迟加载组件</p><pre><code>##分析页面看看那些内容是一进来必须要加载的，那些内容可以等一会在加载。使用onload事件来区别。在客户端支持js的时候可以提高用户体验，但是必须确保页面在不支持js的时候也能正常工作，在确定页面运行正常之后延迟加载脚本去增强用户体验以及支持一些拖放和动画等，也可以使用‘渐进增强’    </code></pre><p>##4. 预加载组件</p><pre><code>##预加载和上面的延迟加载看起来是相反的，但是它和延迟加载有不一样的目的，预加载组件可以充分利用浏览器空余时间去请求一些将来会用到的组件(图片、样式表、脚本等)，预加载分为下面这几种1) 无条件预加载    尽快开始加载，获取一些额外的组件2) 条件性预加载    根据用户已经完成的操作猜测用户将要跳转到哪个页面并据此预加载3) 在退出新设计(页面等)的时候用户可能会有‘这些新东西不错，但是比之前的更慢了’这种想法，面对这种想法可以通过在旧的网站的浏览器空闲时间来加载新设计(页面)的脚本</code></pre><p>##5. 减少DOM元素的数量以及操作</p><pre><code>##更多的DOM元素意味着这个网站更大，也就是意味这需要下载更多的字节，一个网站上500个DOM元素和5000个DOM元素在加载的时候是有区别的。操作DOM有可能造成页面的重绘以及重构，会对页面的性能造成损耗，所以要尽可能的避免    </code></pre><p>##6. 杜绝404错误</p><pre><code>##有的网站中会有比较有帮助的404(你的意思是这样吗？)，但是会浪费服务器资源，最不应该浪费的是链接到外部的脚本等，这种请求将阻塞并行下载</code></pre><p>##7. 避免使用css的表达式</p><pre><code>##css的表达式非常方便，从IE5开始支持，但是到IE8就不推荐使用了</code></pre><p>##8. 外部文件</p><pre><code>##可以把js以及css放在外面，因为这样浏览器可以进行缓存，如果写在页面中或者直接写在行内这样每次请求这个html的时候都会重新下载，这样会减少html文件大小，但是会增加http请求数量，可是第一次请求之后js和css就会被缓存在浏览器中，这样既减少了http请求数量也减少了html文件的大小</code></pre><p>##9. 避免img的src的属性为空值</p><pre><code>##如果为空值的话浏览器就会向服务器发一次请求，要避免这种请求    </code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##1. 减少HTTP请求&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;##1) 合并文件
+    把所有的脚本放在一个文件中请求，也可以合并所有的CSS，如果每个页面的脚本和样式不一样的话，就会是一项比较麻烦的工作
+2) CSS Sprites 
+    这是减少图片请求数量的方式(首
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>前后端的连接步骤</title>
